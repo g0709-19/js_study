@@ -1,0 +1,24 @@
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #056676;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.color1 {
+    background-color: #056676;
+}
+
+.color2 {
+    background-color: #5eaaa8;
+}
+
+.color3 {
+    background-color: #a3d2ca;
+}
+
+.color4 {
+    background-color: #e8ded2;
+}
