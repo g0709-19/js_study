@@ -12,7 +12,7 @@ function deleteToDo(event)
     const li = btn.parentNode;
     toDoList.removeChild(li);
     const removedId = li.id;
-    const cleanToDos = toDos.filter(toDo => toDo.id !== parseInt(li.id)); // li.id 가 string 이라 비교 오류
+    const cleanToDos = toDos.filter(toDo => toDo.id !== parseInt(li.id)); // comparison error 'cause li.id was string
     toDos = cleanToDos;
     saveToDos();
 }
@@ -32,6 +32,7 @@ function paintToDo(text)
     const span = document.createElement('span');
     span.innerText = text;
     li.id = newId;
+    li.className = 'toDoItem';
     li.appendChild(delBtn);
     li.appendChild(span);
     toDoList.appendChild(li);

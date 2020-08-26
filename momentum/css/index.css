@@ -1,13 +1,67 @@
+* { margin: 0; }
+
 body {
+    color: #ffffff;
     background-color: #2c3e50;
+}
+
+button {
+    border: none; background: none; outline: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
 
 .btn {
     cursor: pointer;
 }
 
-body {
-    color: #34495e;
+.clock, .greetings, .toDoForm { margin-bottom: 20px; }
+
+.clock {
+    font-size: 40pt;
+}
+
+.weather { text-align: right; font-style: italic; margin: 20px 20px; }
+
+.main {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formDeco {
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    padding: 12px;
+    width: 200px;
+    outline: none;
+    word-break: break-all;
+    border-color: LightGray;
+    background: none;
+}
+
+
+.formDeco, .formDeco::placeholder { color: #ffffff; }
+
+.toDoBox {
+    width: 250px;
+}
+
+.toDoList {
+    display: flex;
+    align-self: flex-start;
+}
+
+.formDeco, .toDoItem { margin-bottom: 10px; }
+
+.formDeco, .toDoList {
+    font-size: 15pt;
 }
 
 .clicked {
@@ -16,6 +70,10 @@ body {
 
 .form, .greetings {
     display: none;
+}
+
+.greetings {
+    font-size: 20pt;
 }
 
 .showing {
