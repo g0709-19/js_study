@@ -2,10 +2,10 @@ const body = document.querySelector('body');
 
 const IMAGE_AMOUNT = 6;
 
-// function handleImgLoad()
-// {
-//     console.log('Image loaded!');
-// }
+function handleImgLoad()
+{
+    console.log('Image loaded!');
+}
 
 function paintImage(imgNumber)
 {
@@ -13,8 +13,8 @@ function paintImage(imgNumber)
     image.src = `img/${imgNumber + 1}.jpg`;
     body.appendChild(image);
     image.classList.add('bgImg');
-    // body.prepend(image);
-    // image.addEventListener('loadend', handleImgLoad);
+    body.prepend(image);
+    image.addEventListener('loadend', handleImgLoad);
 }
 
 function getRandom()
