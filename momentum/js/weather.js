@@ -5,7 +5,7 @@ const COORDS = 'coords';
 
 function getWeather(lat, lon)
 {
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`;
     fetch(url)
     .then(response => response.json())
     .then(json => {

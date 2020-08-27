@@ -20,8 +20,11 @@ ul {
 
 .clock, .greetings, .toDoForm { margin-bottom: 20px; }
 
-.clock {
-    font-size: 40pt;
+.clock { font-size: 40pt; }
+
+.nodrag {
+    cursor: default;
+    user-select: none;
 }
 
 .weather { text-align: right; font-style: italic; margin: 20px 20px; }
@@ -96,4 +99,8 @@ ul {
     height: 100%;
     z-index: -1;
     animation: fadeIn 0.5s linear;
+}
+
+.toDoItem {
+    animation: fadeIn .5s linear;
 }
