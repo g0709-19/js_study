@@ -2,6 +2,8 @@ const toDoForm = document.querySelector('.js-toDoForm'),
     toDoInput = toDoForm.querySelector('input'),
     toDoList = document.querySelector('.js-toDoList');
 
+const BLANK_PATTERN = /^\s+|\s+$/g;
+
 const TODOS_LS = 'toDos';
 
 let toDos = [];
@@ -48,6 +50,10 @@ function handleSubmit(event)
 {
     event.preventDefault();
     const currentValue = toDoInput.value;
+    if( currentValue.replace(BLANK_PATTERN, '') == '' ){
+        // blank can't not be submitted
+        return;
+    }
     paintToDo(currentValue);
     toDoInput.value = '';
 }
