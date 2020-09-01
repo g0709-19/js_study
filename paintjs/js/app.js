@@ -1,5 +1,10 @@
 const canvas = document.querySelector('#jsCanvas');
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext('2d'); // will work for this context
+
+// pixel manipulating size
+// don't give pixel modifier a size
+canvas.width = 600;
+canvas.height = 600;
 
 ctx.strokeStyle = '#2C2C2C';
 ctx.lineWidth = 2.5;
@@ -22,14 +27,15 @@ function onMouseMove(event)
     const x = event.offsetX;
     if (!painting)
     {
-        ctx.beginPath();
-        ctx.moveTo(x, y);
+        ctx.beginPath(); // path is a line
+        ctx.moveTo(x, y); // if not, the start point becomes last point of a line
     }
     else
     {
         console.log(x, y);
         ctx.lineTo(x, y);
-        ctx.stroke();
+        ctx.stroke(); // if not, anything shown
+        // ctx.closePath();
     }
 }
 
