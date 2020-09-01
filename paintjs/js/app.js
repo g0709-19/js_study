@@ -1,5 +1,6 @@
 const canvas = document.querySelector('#jsCanvas');
 const ctx = canvas.getContext('2d'); // will work for this context
+const colors = document.getElementsByClassName('jsColor');
 
 // pixel manipulating size
 // don't give pixel modifier a size
@@ -32,7 +33,6 @@ function onMouseMove(event)
     }
     else
     {
-        console.log(x, y);
         ctx.lineTo(x, y);
         ctx.stroke(); // if not, anything shown
         // ctx.closePath();
@@ -44,6 +44,12 @@ function onMouseDown(event)
     startPainting();
 }
 
+function handleColorClick(event)
+{
+    const color = event.target.style.backgroundColor;
+    ctx.strokeStyle = color;
+}
+
 function init()
 {
     if (canvas)
@@ -53,6 +59,8 @@ function init()
         canvas.addEventListener('mouseup', stopPainting);
         canvas.addEventListener('mouseleave', stopPainting);
     }
+
+    Array.from(colors).forEach(color => color.addEventListener('click', handleColorClick));
 }
 
 init();
