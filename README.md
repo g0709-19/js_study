@@ -13,10 +13,10 @@
 
 ## 😎 배우고 나면
 * 바닐라 JS로 크롬 앱 만들기 **<- 방학 중 끝냄**
-<img src="img/chrome.png">
+<img src="img/momentum.gif">
 
 * 바닐라 JS로 그림판 만들기
-<img src="img/paint.png">
+<img src="img/paintjs.gif">
 
 * 바닐라 JS로 계산기(?) 만들기
 <img src="img/calcurator.png">
