@@ -1,0 +1,126 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --personal-color: #296ca8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--personal-color);
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.filter-container, .posts {
+    width: 80vw;
+    max-width: 800px;
+}
+
+.filter-container {
+    margin-top: 20px;
+}
+
+.filter {
+    font-size: 16px;
+    color: #777;
+    padding: 12px;
+    width: 100%;
+}
+
+.post {
+    position: relative;
+    margin: 40px 0;
+}
+
+.post .index {
+    border-radius: 50%;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    color: var(--personal-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+}
+
+.post .box {
+    background-color: #4992d3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.info {
+    margin-left: 20px;
+}
+
+.info h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.loading {
+    position: fixed;
+    bottom: 50px;
+    display: none;
+}
+
+.loading.show {
+    display: flex;
+}
+
+.circle {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    animation: bounce 0.5s ease-in infinite;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.circle:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+
+.circle:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: -10px;
+    }
+    100% {
+        top: 0;
+    }
+}
