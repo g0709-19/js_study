@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="choose-voice" id="js-choose-voice">
+        <div class="choose-area">
+            <h2>Choose Voice</h2>
+            <select name="voices" id="js-voice-select">
+                <option value="ko-KR">ko-KR</option>
+                <option value="en-US">en-US</option>
+            </select>
+            <textarea id="js-to-read" placeholder="Enter text to read..."></textarea>
+            <button class="read-btn" id="js-read">Read Text</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Speech Text Reader</h1>
+        <button class="toggle-btn" id="js-toggle-btn">
+            Toggle Text Box
+        </button>
+        <div class="texts" id="js-texts">
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
